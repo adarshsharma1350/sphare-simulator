@@ -1,0 +1,221 @@
+
+/* SPHARE SIMULATOR — COMMON NAVBAR */
+
+.topbar {
+    min-height: 72px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(11, 15, 25, 0.86);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* BRAND */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+.logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #1a73e8, #28d7ff);
+    color: #fff;
+    font-weight: 800;
+    box-shadow: 0 0 24px rgba(40, 215, 255, 0.25);
+    flex-shrink: 0;
+}
+
+.brand strong {
+    display: block;
+    color: #f3f6ff;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.brand span {
+    display: block;
+    color: #8e9ab3;
+    font-size: 10px;
+    margin-top: 3px;
+    white-space: nowrap;
+}
+
+/* NAVIGATION */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(40, 215, 255, 0.35) transparent;
+    scroll-behavior: smooth;
+    flex: 1;
+    min-width: 0;
+    margin: 0 8px;
+}
+
+.nav::-webkit-scrollbar {
+    height: 4px;
+}
+
+.nav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.nav::-webkit-scrollbar-thumb {
+    background: rgba(40, 215, 255, 0.35);
+    border-radius: 20px;
+}
+
+.nav::-webkit-scrollbar-thumb:hover {
+    background: rgba(40, 215, 255, 0.7);
+}
+
+.nav a {
+    flex-shrink: 0;
+    color: #aab5ca;
+    text-decoration: none;
+    padding: 9px 10px;
+    border-radius: 9px;
+    font-size: 11px;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav a:hover {
+    background: rgba(26, 115, 232, 0.12);
+    color: #fff;
+}
+
+.nav a.active {
+    background: rgba(26, 115, 232, 0.16);
+    color: #fff;
+    box-shadow: inset 0 0 0 1px rgba(26, 115, 232, 0.18);
+}
+
+/* CONNECTION STATUS */
+
+.connection {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+    font-size: 11px;
+    color: #b9c3d7;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #39e58c;
+    box-shadow: 0 0 12px rgba(57, 229, 140, 0.5);
+    flex-shrink: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 1200px) {
+    .topbar {
+        padding: 0 18px;
+        gap: 10px;
+    }
+
+    .brand {
+        min-width: 165px;
+    }
+
+    .nav {
+        margin: 0;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+    .topbar {
+        min-height: 72px;
+        padding: 13px 16px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .brand {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .connection {
+        flex-shrink: 0;
+    }
+
+    .nav {
+        order: 3;
+        width: 100%;
+        max-width: none;
+        flex-basis: 100%;
+        flex: 0 0 100%;
+        margin: 0;
+        padding-bottom: 4px;
+    }
+}
+
+/* VERY SMALL MOBILE */
+
+@media (max-width: 520px) {
+    .topbar {
+        padding: 12px;
+    }
+
+    .logo {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+    }
+
+    .brand strong {
+        font-size: 12px;
+    }
+
+    .brand span {
+        font-size: 8px;
+    }
+
+    .connection {
+        font-size: 9px;
+    }
+
+    .connection .dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .nav a {
+        padding: 8px 9px;
+        font-size: 10px;
+    }
+}

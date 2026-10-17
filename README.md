@@ -1,59 +1,241 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚁 Sphare Simulator
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<p center>
+  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
+  <img src="https://img.shields.io/badge/Blade-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Blade" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
+  <img src="https://img.shields.io/badge/Drone_Control-000000?style=for-the-badge&logo=drone&logoColor=white" alt="Drone" />
 </p>
 
-## About Laravel
+> A modular, high-performance web dashboard for drone telemetry, flight simulation, real-time navigation, vehicle configuration, diagnostics, and safety automation.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📋 Table of Contents
+- [🚁 Sphare Simulator](#-sphare-simulator)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [🚀 Project Overview](#-project-overview)
+    - [Key Highlights](#key-highlights)
+  - [🗂️ Architecture \& Modules](#️-architecture--modules)
+  - [📑 Module Progress Tracker](#-module-progress-tracker)
+  - [🛣️ Development Roadmap](#️-development-roadmap)
+    - [Phase 1 — College Demonstration Essentials](#phase-1--college-demonstration-essentials)
+    - [Phase 2 — Core Operations \& Reliability](#phase-2--core-operations--reliability)
+    - [Phase 3 — Advanced Features \& AI](#phase-3--advanced-features--ai)
+  - [🧱 Development Guidelines](#-development-guidelines)
+  - [▶️ Running the Project](#️-running-the-project)
+  - [✅ Demo Readiness Checklist](#-demo-readiness-checklist)
+  - [🛡️ Safety Note](#️-safety-note)
+    - [⚡ Powered by **Coodig Sphare** | **Sphare**](#-powered-by-coodig-sphare--sphare)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🚀 Project Overview
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+**Sphare Simulator** is designed to unify all aspects of drone control and telemetry into a single, cohesive dashboard interface. Built with **Laravel and Blade**, it organizes complex vehicle operations—ranging from manual RC flight and mission planning to AI vision and geofencing—into modular, lightweight views.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Key Highlights
+- **Real-Time Telemetry & Tracking:** Live flight stats, GPS positional data, and vector maps.
+- **Mission Planning:** Automated waypoints, flight history logs, and instant mission replay.
+- **Vehicle Configuration:** Sensor calibration, firmware updates, battery monitoring, and payload control.
+- **Advanced Vision Systems:** Thermal views, 3D visualization, and gesture-based control interfaces.
+- **Safety & Failsafe:** Autonomous geofencing, dynamic emergency protocols, and airspace compliance.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🗂️ Architecture & Modules
 
-### Premium Partners
+The application interface is segmented into **9 core modules** within the Laravel Blade framework:
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+| # | Module | Core Responsibility | Example Views |
+|---|---|---|---|
+| **01** | `overview` | Primary telemetry summary, landing page, and operational dashboard | `home`, `index`, `dashboard` |
+| **02** | `flight_operations` | Manual controls, mission planning, simulation, and swarm management | `remote_control`, `flight_control`, `mission_planner`, `simulator` |
+| **03** | `vehicle_setup` | Hardware calibration, parameters, firmware upgrades, and accessories | `calibration`, `parameters`, `battery`, `gimbal` |
+| **04** | `navigation_environment` | GPS map overlays, weather, telemetry metrics, and obstacle avoidance | `gps`, `maps`, `telemetry`, `weather`, `airspace` |
+| **05** | `vision_imaging` | FPV video streaming, thermal overlays, gesture control, and AI vision | `camera_fpv`, `ai_vision`, `3d_view`, `gesture_control` |
+| **06** | `monitoring_diagnostics` | System logs, live health metrics, analytics, and storage monitors | `system_health`, `analytics`, `eventlogs`, `api_monitor` |
+| **07** | `safety` | Boundary limits, failsafe triggers, and emergency abort routines | `failsafe`, `geofence` |
+| **08** | `developer_tools` | Command-line interface (CLI), automation hooks, and system settings | `cli`, `developer`, `automation`, `settings` |
+| **09** | `help_documentation` | User guides, API references, onboarding, and project policies | `getting_started`, `documentation`, `support`, `faqs` |
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📑 Module Progress Tracker
 
-## Code of Conduct
+Mark pages as complete (`[x]`) as you build and integrate them into your project.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```text
+resources/views/
+├── 01 — overview/
+│   ├── [ ] home.blade.php
+│   ├── [ ] index.blade.php
+│   └── [ ] dashboard.blade.php
+│
+├── 02 — flight_operations/
+│   ├── [ ] rc_controller.blade.php
+│   ├── [ ] joystick.blade.php
+│   ├── [ ] remote_control.blade.php
+│   ├── [ ] flight_control.blade.php
+│   ├── [ ] command_center.blade.php
+│   ├── [ ] simulator.blade.php
+│   ├── [ ] preflight.blade.php
+│   ├── [ ] mission_planner.blade.php
+│   ├── [ ] mission_library.blade.php
+│   ├── [ ] flight_history.blade.php
+│   ├── [ ] replay.blade.php
+│   ├── [ ] multi_drone.blade.php
+│   └── [ ] swarm.blade.php
+│
+├── 03 — vehicle_setup/
+│   ├── [ ] calibration.blade.php
+│   ├── [ ] parameters.blade.php
+│   ├── [ ] firmware.blade.php
+│   ├── [ ] vehicle_setup.blade.php
+│   ├── [ ] battery.blade.php
+│   ├── [ ] gimbal.blade.php
+│   └── [ ] payload.blade.php
+│
+├── 04 — navigation_environment/
+│   ├── [ ] compass.blade.php
+│   ├── [ ] network.blade.php
+│   ├── [ ] connection.blade.php
+│   ├── [ ] gps.blade.php
+│   ├── [ ] maps.blade.php
+│   ├── [ ] telemetry.blade.php
+│   ├── [ ] airspace.blade.php
+│   ├── [ ] range_finder.blade.php
+│   ├── [ ] terrain.blade.php
+│   ├── [ ] weather.blade.php
+│   ├── [ ] obstacle_avoidance.blade.php
+│   └── [ ] agriculture.blade.php
+│
+├── 05 — vision_imaging/
+│   ├── [ ] ai_vision.blade.php
+│   ├── [ ] camera_fpv.blade.php
+│   ├── [ ] thermal.blade.php
+│   ├── [ ] 3d_view.blade.php
+│   └── [ ] gesture_control.blade.php
+│
+├── 06 — monitoring_diagnostics/
+│   ├── [ ] analytics.blade.php
+│   ├── [ ] api_monitor.blade.php
+│   ├── [ ] logs.blade.php
+│   ├── [ ] eventlogs.blade.php
+│   ├── [ ] storage.blade.php
+│   ├── [ ] notifications.blade.php
+│   ├── [ ] system_health.blade.php
+│   ├── [ ] status.blade.php
+│   └── [ ] system_info.blade.php
+│
+├── 07 — safety/
+│   ├── [ ] failsafe.blade.php
+│   └── [ ] geofence.blade.php
+│
+├── 08 — developer_tools/
+│   ├── [ ] automation.blade.php
+│   ├── [ ] developer.blade.php
+│   ├── [ ] cli.blade.php
+│   ├── [ ] settings.blade.php
+│   └── [ ] shortcuts.blade.php
+│
+└── 09 — help_documentation/
+    ├── [ ] about.blade.php
+    ├── [ ] changelog.blade.php
+    ├── [ ] contact_us.blade.php
+    ├── [ ] documentation.blade.php
+    ├── [ ] faqs.blade.php
+    ├── [ ] features.blade.php
+    ├── [ ] feedback.blade.php
+    ├── [ ] getting_started.blade.php
+    ├── [ ] help.blade.php
+    ├── [ ] licenses.blade.php
+    ├── [ ] privacy.blade.php
+    ├── [ ] support.blade.php
+    └── [ ] terms.blade.php
+```
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## 🛣️ Development Roadmap
 
-## License
+### Phase 1 — College Demonstration Essentials
+- [ ] Home View & Main Dashboard
+- [ ] Manual Remote Control Interface
+- [ ] Developer CLI Terminal
+- [ ] Live Telemetry Display
+- [ ] GPS Mapping & Positioning
+- [ ] Basic Geofencing Boundaries
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Phase 2 — Core Operations & Reliability
+- [ ] Advanced Flight Control Systems
+- [ ] Network & Connection Monitoring
+- [ ] Real-Time Battery Diagnostics
+- [ ] Preflight Checklists & Validations
+- [ ] Automated Failsafe Triggers
+- [ ] System Event Logging
+
+### Phase 3 — Advanced Features & AI
+- [ ] Mission Planner & Autonomous Waypoints
+- [ ] Flight History & Interactive Replay
+- [ ] Camera FPV Streaming & Computer Vision / AI
+- [ ] Gesture Control Interface
+- [ ] Analytics Dashboard & Flight Automation
+- [ ] Multi-Drone Swarm Capabilities
+
+---
+
+## 🧱 Development Guidelines
+
+1. **Modular Architecture:** Place new pages in their designated module folder.
+2. **Component Reusability:** Maintain consistent UI styling across all Blade views using shared layouts and components.
+3. **Data Authenticity:** Clearly distinguish between **Simulated Data**, **Live Hardware Telemetry**, and **Offline Placeholders**.
+4. **Clean Route Naming:** Use clear, predictable dot notation for Laravel views (e.g., `view('flight_operations.simulator')`).
+
+---
+
+## ▶️ Running the Project
+
+1. Clone or extract the repository to your environment.
+2. Install dependencies (if applicable):
+   ```bash
+   composer install
+   npm install && npm run dev
+   ```
+3. Start the local server:
+   ```bash
+   php artisan serve
+   ```
+4. Access the dashboard in your browser:
+   ```text
+   http://127.0.0.1:8000
+   ```
+
+---
+
+## ✅ Demo Readiness Checklist
+
+- [ ] Laravel development server starts with zero console errors.
+- [ ] All declared Blade routes load successfully.
+- [ ] Dashboard telemetry widgets respond gracefully.
+- [ ] Remote control commands work as expected in simulation.
+- [ ] GPS and map components load and handle missing markers smoothly.
+- [ ] Failsafe and emergency disarm controls are quickly accessible.
+
+---
+
+## 🛡️ Safety Note
+
+> **Important:** Always test flight commands in software simulation mode prior to physical hardware integration. Web dashboard interfaces should complement, not replace, mandatory hardware-level failsafes and local civil aviation regulatory rules.
+
+---
+
+<br>
+
+<div align="center">
+
+### ⚡ Powered by **Coodig Sphare** | **Sphare**
+
+*A modular drone simulator and control solution built with Laravel & Blade.*
+
+</div>
